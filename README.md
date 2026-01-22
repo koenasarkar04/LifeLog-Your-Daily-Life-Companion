@@ -1,6 +1,6 @@
 # LifeLog-Your-Daily-Life-Companion
 <br>
-Author - Koena Sarkar
+Author - Koena Sarkar :/
 
 LifeLog is a simple full-stack web application that helps users track their daily life activities such as mood, food intake, water consumption, and sleep.  
 It is designed as a beginner-friendly project to understand complete end-to-end web development including frontend, backend, database, and DevOps basics.
