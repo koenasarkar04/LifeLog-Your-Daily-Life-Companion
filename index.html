@@ -1,34 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>LifeLog - Your Daily Life Companion</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>LifeLog Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to LifeLog</h1>
-        <p>Your Daily Life Companion</p>
-        <p>Developed by Koena Sarkar</p>
-    </header>
-    <main>
-        <section id="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Track your daily activities</li>
-                <li>Set and manage goals</li>
-                <li>Reflect on your day with journaling</li>
-            </ul>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>LifeLog is designed to help you make the most of your day by keeping track of your activities and goals.</p>
-        </section>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>LifeLog</h1>
+    <span>Your personal digital journal</span>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <a class="active">Dashboard</a>
+        <a>Daily Journal</a>
+        <a>Habits</a>
+        <a>Goals</a>
+        <a>Health</a>
+        <a>Memories</a>
+        <a>Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <!-- Overview Cards -->
+      <section class="cards">
+        <div class="card">
+          <h3>Today</h3>
+          <p>Reflect. Improve. Grow.</p>
+        </div>
+
+        <div class="card">
+          <h3>Habits</h3>
+          <p>5 / 7 completed</p>
+        </div>
+
+        <div class="card">
+          <h3>Goals</h3>
+          <p>2 milestones reached</p>
+        </div>
+
+        <div class="card">
+          <h3>Mood</h3>
+          <p>Calm & Focused</p>
+        </div>
+      </section>
+
+      <!-- Journal Timeline -->
+      <section class="timeline">
+        <h2>Recent Journal Entries</h2>
+
+        <div class="entry">
+          <span class="date">25 Jan 2026</span>
+          <p>Focused day. Learned new concepts and stayed consistent.</p>
+        </div>
+
+        <div class="entry">
+          <span class="date">24 Jan 2026</span>
+          <p>Felt productive. Need to improve sleep routine.</p>
+        </div>
+
+        <div class="entry">
+          <span class="date">23 Jan 2026</span>
+          <p>Relaxed evening, reflected on long-term goals.</p>
+        </div>
+      </section>
+
     </main>
-    <footer>
-        <p>&copy; 2023 LifeLog. All rights reserved.</p>
-    </footer>
+  </div>
+
 </body>
 </html>
