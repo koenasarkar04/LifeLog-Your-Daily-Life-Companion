@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LifeLog | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h2>LifeLog</h2>
+  <span>Today</span>
+</header>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a class="active">Dashboard</a>
+    <a>Daily Log</a>
+    <a>Food</a>
+    <a>Water</a>
+    <a>Sleep</a>
+    <a>Logout</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- Summary Cards -->
+    <section class="summary">
+      <div class="box">😊 Mood<br><strong>Good</strong></div>
+      <div class="box">🥗 Meals<br><strong>3</strong></div>
+      <div class="box">💧 Water<br><strong>2.5 L</strong></div>
+      <div class="box">😴 Sleep<br><strong>7 hrs</strong></div>
+    </section>
+
+    <!-- Daily Log -->
+    <section class="card">
+      <h3>Daily Mood & Notes</h3>
+      <select>
+        <option>Mood</option>
+        <option>Happy</option>
+        <option>Neutral</option>
+        <option>Sad</option>
+      </select>
+      <textarea placeholder="Write your thoughts..."></textarea>
+    </section>
+
+    <!-- Food -->
+    <section class="card">
+      <h3>Food Intake</h3>
+      <input type="text" placeholder="Meal description">
+    </section>
+
+    <!-- Water -->
+    <section class="card">
+      <h3>Water Consumption (Liters)</h3>
+      <input type="number" placeholder="e.g. 2.5">
+    </section>
+
+    <!-- Sleep -->
+    <section class="card">
+      <h3>Sleep Hours</h3>
+      <input type="number" placeholder="Hours slept">
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
