@@ -9,7 +9,7 @@ if (registerForm) {
     registerForm.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevent form from submitting
 
-        let name = nameInput.value.trim();
+        let name = nameInput.value.trim(); // Remove leading and trailing whitespace so that we can check if the field is empty more accurately
         let email = emailInput.value.trim();
         let password = passwordInput.value.trim();
         
@@ -36,18 +36,19 @@ if (registerForm) {
             email : email,
             password : password
         };
-        localStorage.setItem("user", JSON.stringify(user)); // Store user data as a string in local storage
-        window.location.href = "index.html";
+        //localStorage.setItem (KEY, VALUE)
+        localStorage.setItem("user", JSON.stringify(user)); // Store user data as a string in local storage as it only understands text
+        window.location.href = "index.html"; // Redirect to login page after successful registration
     });
 }
-
+// pathname check to know currently where is the user logged in
 if (window.location.pathname.includes("dashboard.html") && localStorage.getItem("isLoggedIn") !== "true") {
     window.location.href="index.html";
-}
+} // Redirect to login page if user tries to access dashboard without logging in
 
 if (loginForm) {
     loginForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent form from submitting
+        event.preventDefault(); // Prevent form from submitting, disables HTML auto behaviour and allows us to take control of the login process with JavaScript
 
         let email = emailInput.value.trim();
         let password = passwordInput.value.trim();
@@ -72,7 +73,7 @@ if (loginForm) {
             errorMsg.innerText = "No user found. Please register first.";
             return; 
         }
-        //check if user data exists by converting back o object
+        //check if user data exists by converting back to object from string and comparing with input
         let user = JSON.parse(storedUser);
 
         if (email !== user.email || password !== user.password) {
@@ -80,7 +81,7 @@ if (loginForm) {
             return;
         }
 
-        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("isLoggedIn", "true"); //localStorage.setItem (KEY, VALUE)
         window.location.href = "dashboard.html";
     });
 }
