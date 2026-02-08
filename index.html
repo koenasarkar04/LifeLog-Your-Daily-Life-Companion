@@ -11,11 +11,13 @@
     <h1>LifeLog</h1>
     <p>Welcome back</p>
 
-    <form>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button class="button1" type="submit">Login</button>
+    <form id="loginForm">
+      <input type="email" id ="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button class="button1" type="submit">Login</button> <!-- Login button type changed so that control can be taken over by javascript -->
     </form>
+    <!--to show error message on wrong credentials -->
+    <p id="errorMsg"></p>
 
     <span>Don't have an account? <a href="register.html">Register</a></span>
   </div>
