@@ -46,3 +46,10 @@ if (loginForm) {
         window.location.href = "dashboard.html";
     });
 }
+
+let registerForm = document.querySelector("#registerForm");
+
+if (window.location.pathname.includes(".html") && localStorage.getItem("isRegistered") !== "true") {
+    window.location.href="register.html";
+}
+if (registerForm) {
